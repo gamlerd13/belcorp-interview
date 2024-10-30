@@ -1,13 +1,14 @@
 import { Card } from '@radix-ui/themes'
 import AgGridProduct from './AgGrid'
-import { Download } from 'lucide-react'
+import { Plus } from 'lucide-react'
 import CustomButton from '../../components/Button'
 import ProductSearchBar from './SearchBar'
 import NavBar from '../../components/NavBar'
+import { toast } from 'sonner'
 
 function Product() {
   const handleDownload = () => {
-    console.log('hola mundo')
+    toast.error('Funcionalidad no implementada :D')
   }
   return (
     <div>
@@ -17,8 +18,8 @@ function Product() {
         <div className="flex justify-between">
           <ProductSearchBar />
           <CustomButton
-            icon={Download}
-            label={'Descargar'}
+            icon={Plus}
+            label={'Agregar Producto'}
             onClick={handleDownload}
           />
         </div>
