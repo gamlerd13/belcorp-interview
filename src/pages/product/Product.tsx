@@ -2,7 +2,7 @@ import { Card } from '@radix-ui/themes'
 import AgGridProduct from './AgGrid'
 import { Download } from 'lucide-react'
 import CustomButton from '../../components/Button'
-import ProductSearchBar from './hooks/SearchBar'
+import ProductSearchBar from './SearchBar'
 import NavBar from '../../components/NavBar'
 
 function Product() {

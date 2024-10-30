@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
-import { SearchInputQuery } from '../../../components/SearchInputQuery'
-import { VL_SEARCH_DEBOUNCE_DELAY } from '../../../constants/main'
-import { useProductStore } from '../../../store/productStore'
+import { SearchInputQuery } from '../../components/SearchInputQuery'
+import { VL_SEARCH_DEBOUNCE_DELAY } from '../../constants/main'
+import { useProductStore } from '../../store/productStore'
 
 export default function ProductSearchBar() {
   const { products, setFilterProducts } = useProductStore()
@@ -17,7 +17,7 @@ export default function ProductSearchBar() {
   }, [query])
 
   useEffect(() => {
-    if (debouncedQuery.length > 3) {
+    if (debouncedQuery.length > 2) {
       const keywords = debouncedQuery
         .split(' ')
         .filter((word) => word.trim() !== '')
